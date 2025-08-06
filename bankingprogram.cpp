@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 
 void showBalance(double balance);
 double deposit();
@@ -13,12 +14,20 @@ int main()
 
     do
     {
-
-        std::cout << "1. Show Balance.\n";
+        std::cout << "\n1. Show Balance.\n";
         std::cout << "2. Deposit Money.\n";
         std::cout << "3. Withdraw Money.\n";
         std::cout << "4. Exit.\n";
         std::cin >> choice;
+
+        if (std::cin.fail())
+        {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Invalid input! Please enter a number (1-4).\n";
+            continue;
+        }
+
         switch (choice)
         {
         case 1:
@@ -36,16 +45,15 @@ int main()
             }
             else
             {
-                std::cout << "Insufficient Fund.\n";
+                std::cout << "Insufficient Funds.\n";
             }
             break;
         }
-
         case 4:
             std::cout << "Thank you for visiting us!\n";
             break;
         default:
-            std::cout << "Please enter valid input (1-4).";
+            std::cout << "Please enter a valid input (1-4).\n";
         }
 
     } while (choice != 4);
