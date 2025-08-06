@@ -1,2 +1,1 @@
-srand(time(NULL));
-    int num = rand();
+std::cin >> choice;
