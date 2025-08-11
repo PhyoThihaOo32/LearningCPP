@@ -1,1 +1,1 @@
-std::cin >> choice;
+bubbleSortArray(numbers, size);
