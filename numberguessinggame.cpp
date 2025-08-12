@@ -5,7 +5,7 @@ int main()
 
     int num;
     int guess;
-    int tries = 0;
+    int tries = 0; // Always initialize your variables in C++ unless you're 100% sure they'll be assigned before used.
 
     srand(time(NULL));
     num = (rand() % 100) + 1;

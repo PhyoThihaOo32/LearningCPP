@@ -23,11 +23,9 @@ int main()
     showOriginalValue(originalValue);
 
     swapByValue(food1, food2);
-
     showFoods(food1, food2);
 
     swapByReference(food1, food2);
-
     showFoods(food1, food2);
 
     return 0;
