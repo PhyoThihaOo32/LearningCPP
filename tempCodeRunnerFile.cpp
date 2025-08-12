@@ -1,1 +1,6 @@
-cout << "Here is your Fav Foods!" << endl;
+
+    // passByValue(originalValue);
+    // showOriginalValue(originalValue);
+
+    // passByReference(originalValue);
+    // showOriginalValue(originalValue);
